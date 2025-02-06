@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef ABC - Healthy Eating</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links select {
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .register {
+            background: white;
+            color: #333;
+        }
+
+        .hero {
+            display: flex;
+            padding: 50px;
+            gap: 50px;
+            align-items: center;
+            background: #f5f5f5;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .explore-btn {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-image img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .food-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .food-item {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .chef-section {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .chef-section h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .chef-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .food-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .food-icons img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image img {
+                width: 300px;
+                height: 300px;
+            }
+
+            .food-grid {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Chef ABC</div>
+        <div class="nav-links">
+            <select>
+                <option>Instructors</option>
+            </select>
+            <select>
+                <option>All Categories</option>
+            </select>
+            <a href="#" style="color: white; text-decoration: none;">View Plans</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>A place you<br>eat healthy</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper habitant arcu eget. Et integer facilisi eget. Lorem ipsum dolor.</p>
+            <button class="explore-btn">Explore the menu</button>
+        </div>
+        <div class="hero-image">
+            <img src="image_202.jpg" alt="Healthy food bowl">
+        </div>
+    </div>
+
+    <div class="food-grid">
+        <div class="food-item">
+            <img src="image_198.jpg" alt="Food item 1">
+        </div>
+        <div class="food-item">
+            <img src="image_199.jpg" alt="Food item 2">
+        </div>
+        <div class="food-item">
+            <img src="image_200.jpg" alt="Food item 3">
+        </div>
+    </div>
+
+    <div class="chef-section">
+        <h2>Chef ABC</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper</p>
+        <div class="food-icons">
+            <img src="image_194.jpg" alt="Food icon 1">
+            <img src="image_195.jpg" alt="Food icon 2">
+            <img src="image_196.jpg" alt="Food icon 3">
+            <img src="image_197.jpg" alt="Food icon 4">
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add hover effect for buttons
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.opacity = '0.8';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>
